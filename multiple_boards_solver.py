@@ -1,3 +1,5 @@
+#  TODO - add comments!!!
+
 import sys
 import csv 
 from datetime import datetime
@@ -116,7 +118,6 @@ def get_col_elems(board, col, cell_value):
     return neighs
 
 def get_box_elems(board, row, col, cell_value):
-    # TODO 
     box_start_x = int(row/3)*3
     box_start_y = int(col/3)*3
     box = fetch_box_from_board(board, box_start_x, box_start_y)
@@ -131,33 +132,6 @@ def fetch_box_from_board(board, x,y):
             if board[i][j] != 0:
                 box.append(board[i][j])
     return box
-
-# Function: get_board_from_file - DEPRECATED
-# Functionality: will read and parse a csv file to fetch the board that will be solved.
-# Special Instructions: the empty spaces on the board are set to 0 
-
-# def get_board_from_file(FILENAME):
-#     matrix = []
-#     bool_matrix = []
-#     with open (FILENAME, "r") as csvfile:
-#         boardcsv = csv.reader(csvfile)
-#         for line in boardcsv:
-#             line = [int(item) if item.isdigit() else item for item in line]
-#             matrix.append(line)
-#             bool_line = []
-#             for elem in line:
-#                 if elem == 0:
-#                     bool_line.append(True)
-#                 else:
-#                     bool_line.append(False)
-#             bool_matrix.append(bool_line)     
-#     return matrix, bool_matrix
-
-# Function: get_all_boards_from_file
-# Functionality: when there are multiple boards in a single file, extract all boards from it and 
-# return them in a list
-# Note: it is assumed there is a line between each bord on the source file, hence the continue 
-# statement inside the "if counter > NUM_LINES_BOARD" statement
 
 
 def get_boards_from_file(FILENAME):
