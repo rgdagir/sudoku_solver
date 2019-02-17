@@ -3,7 +3,7 @@
 This project implements a sudoku solver.
 
 ## Why did you do this?
-I got bored on an airplane and I saw a kid struggling to solve a sudoku. Boom! Opportunity to make a cool CS project.
+I got bored on a flight and I saw a kid struggling to solve a sudoku. Boom! Opportunity to make a cool CS project.
 
 ## How?
 I explored the concept of recursive backtracking using Python to solve this problem!
